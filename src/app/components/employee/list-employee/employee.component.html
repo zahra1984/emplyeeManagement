@@ -1,0 +1,107 @@
+<swal #deleteSwal title="Delete?" etc></swal>
+<div class="div-header p-2">
+  <button class="btn btn-orange" (click)="addEmployee()">
+    add employee
+    <i class="fa fa-plus"></i>
+  </button>
+</div>
+<table class="table">
+  <thead class="table-header">
+    <tr>
+      <td>Name</td>
+      <td>Job Title</td>
+      <td>Email</td>
+      <td>Phone</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.jobTitle }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.phone }}</td>
+      <td>
+        <!-- <a [routerLink]="['edit-employee']" [queryParams]="{ id:emp.id }">edit</a> -->
+        <a
+          class="btn-link"
+          (click)="editEmployee(emp.id)"
+          data-placement="top"
+          data-toggle="tooltip"
+          data-original-title="Edit"
+          ><i class="fa fa-pencil"></i>
+        </a>
+        <a
+          class="btn-link"
+          [swal]="{
+            title: 'Confirm delete employee ' + emp.name,
+            toast: true,
+            position: 'top-end',
+            showDenyButton: true,
+            denyButtonText: 'no',
+            confirmButtonColor: 'gray',
+            confirmButtonText: 'yes'
+          }"
+          (confirm)="deleteEmployee(emp.id)"
+          data-placement="top"
+          data-toggle="tooltip"
+          data-original-title="Delete"
+          ><i class="fa fa-times"></i
+        ></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:white;">Employee Manager</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" >Add Employee</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search employee" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
+<div class="container" id="main-container">
+    <div class="row">
+        <div  *ngFor="let emp of employees" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-6">
+                        <a href=""><img src="{{emp.imageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div>
+                    <div class="col-6 card-title align-self-center mb-0">
+                        <h5>{{emp.name}}</h5>
+                        <p class="m-0">{{emp.jobTitle}}</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">{{emp.email}}</a></li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone :{{emp.phone}}</li>
+                </ul>
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                        <a class="btn btn-primary tooltips" (click)="onOpenModal(emp,'add')"  data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                        <a class="btn btn-secondary tooltips" (click)="onOpenModal(emp,'delete')" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

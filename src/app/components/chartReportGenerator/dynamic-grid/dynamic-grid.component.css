@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+th.mat-sort-header-sorted {
+  color: black;
+}
+/*.mat-column-freedomScore{
+ color:red;
+}*/
+.mat-header-cell{
+ background-color :orange;
+}
+.mat-row:not(:nth-child(odd)){
+  background-color:#e6e6e6;
+}

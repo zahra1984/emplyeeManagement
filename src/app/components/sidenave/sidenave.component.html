@@ -1,0 +1,35 @@
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+  <button class="navbar-toggler" type="button"
+          (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse"
+       [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item text-light">
+        <a routerLink="/" class="link-light">Employee Management</a>
+
+      </li>
+<span class="p-2 m-2"> </span>
+      <li class="nav-item text-light">
+        <a routerLink="/upload" class="link-light">import excel</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+ <!-- Sidebar -->
+ <div class="bg-light border-right" id="sidebar-wrapper"  [ngClass]="status ? 'hide' : 'show'">
+  <div class="sidebar-heading">menu </div>
+  <div class="list-group list-group-flush">
+    <a href="/" class="list-group-item list-group-item-action bg-light">Employee Management</a>
+    <a href="/upload" class="list-group-item list-group-item-action bg-light">import excel</a>
+  </div>
+</div>
+<!-- /#sidebar-wrapper -->

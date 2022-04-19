@@ -1,0 +1,51 @@
+<div class="card" style="width: 100%">
+  <!-- <div #container></div> -->
+
+  <img
+    class="card-img-top card-image"
+    src="../../../../assets/images/excel.png"
+    alt="upload excel"
+  />
+  <div class="card-body">
+    <h5 class="card-title">Upload excel file</h5>
+    <p class="card-text">
+      Please uploading excel file for freedom and happieness values in
+      countries.
+    </p>
+
+    <div class="form-group">
+      <!-- <label for="file">upload excee</label> -->
+      <input
+        class="form-control form-control-lg"
+        id="file"
+        type="file"
+        (change)="handleFileInput($any($event).target.files)"
+      />
+    </div>
+    <!-- <button (click)="add()" *ngIf="freedomHappienesList.length>0" >Dynamically Add Component</button> -->
+    <div   *ngIf="freedomHappienesList.length > 0">
+
+      <div  >
+        <div class="btn-group"><input
+          type="button"
+          value="save data"
+          class="btn btn-orange mr-1 p-2 btn-action"
+          (click)="saveAllData()"
+        /></div>
+        <div class="btn-group">
+        <input
+        type="button"
+        value="show data"
+        class="btn btn-orange mr-1 p-2 btn-action"
+        (click)="loadDynamicData()"
+      /></div>
+
+
+
+    </div>
+
+
+      </div>
+    </div>
+  </div>
+

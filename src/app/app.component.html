@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading"></div>
+        <div class="list-group list-group-flush linkbar">
+          <a
+            href="/"
+            class="list-group-item list-group-item-action bg-dark text-light border-bottom border-light"
+            >Employee
+          </a>
+          <a
+            href="/upload"
+            class="list-group-item list-group-item-action bg-dark text-light border-bottom border-light"
+            >import excel</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
+      <!-- <app-employee></app-employee> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

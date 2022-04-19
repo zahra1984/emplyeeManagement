@@ -1,0 +1,29 @@
+.div-header {
+  text-align: right;
+  margin: 0 auto;
+  width: 80%;
+}
+.table {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  color: black;
+}
+tr {
+  border-bottom: 1px gray solid;
+}
+tbody tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+.table-header {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+.btn-orange {
+  background-color: orange;
+}
+
+.btn-link {
+  padding: 3px;
+}
